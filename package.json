@@ -1,0 +1,41 @@
+{
+  "name": "react-coolicons",
+  "version": "1.0.0",
+  "description": "Easy to use coolicons.",
+  "keywords": [
+    "coolicons",
+    "icons",
+    "react"
+  ],
+  "repository": "git@github.com:mrdannael/react-coolicons.git",
+  "bugs": {
+    "url": "https://github.com/mrdannael/react-coolicons/issues"
+  },
+  "homepage": "https://github.com/mrdannael/react-coolicons#readme",
+  "author": "mrdannael",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "svg/"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run optimize && npm run build && npm run copy",
+    "build": "npm run build:react && npm-run-all --parallel build:esm build:cjs",
+    "build:react": "node ./scripts/build react",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir ./lib/react/cjs",
+    "optimize": "rimraf ./svg && svgo -q -f ./src -o ./svg",
+    "copy": "cp -t lib/react LICENSE README.md CHANGELOG.md"
+  },
+  "devDependencies": {
+    "@svgr/core": "^5.5.0",
+    "camelcase": "^6.2.0",
+    "chalk": "^4.1.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
+    "react": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "svgo": "^2.6.1",
+    "typescript": "^4.4.3"
+  }
+}
