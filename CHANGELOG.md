@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2023-11-09
+
+- Building esm module with rollup
+- Minify bundle with terser
 
 ## [1.0.0] - 2021-09-21
 
