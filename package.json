@@ -1,47 +1,21 @@
 {
   "name": "react-coolicons",
-  "version": "1.1.1",
-  "description": "Easy to use coolicons.",
+  "version": "2.0.0",
+  "description": "Easy to use coolicons as react components.",
   "keywords": [
     "coolicons",
     "icons",
     "react"
   ],
-  "repository": "git@github.com:mrdannael/react-coolicons.git",
   "bugs": {
     "url": "https://github.com/mrdannael/react-coolicons/issues"
   },
-  "homepage": "https://github.com/mrdannael/react-coolicons#readme",
-  "author": "mrdannael",
-  "license": "MIT",
-  "private": false,
   "files": [
     "svg/"
   ],
-  "sideEffects": false,
-  "scripts": {
-    "prepublishOnly": "npm run optimize && npm run build && npm run copy",
-    "build": "npm run build:react && npm-run-all --parallel build:rollup build:cjs",
-    "build:react": "node ./scripts/build react",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir ./lib/react/cjs",
-    "build:rollup": "rollup -c rollup.config.mjs",
-    "optimize": "rimraf ./svg && svgo -q -f ./src -o ./svg",
-    "copy": "cp -t lib/react LICENSE README.md CHANGELOG.md"
-  },
-  "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@svgr/core": "^5.5.0",
-    "camelcase": "^6.2.0",
-    "chalk": "^4.1.2",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.4.1",
-    "react": "^17.0.2",
-    "rimraf": "^3.0.2",
-    "rollup": "^4.3.0",
-    "svgo": "^2.6.1",
-    "tslib": "^2.6.2",
-    "typescript": "^4.4.3"
-  }
+  "main": "index.js",
+  "repository": "git@github.com:mrdannael/react-coolicons.git",
+  "author": "mrdannael <mr.dannael@gmail.com>",
+  "license": "MIT",
+  "private": false
 }

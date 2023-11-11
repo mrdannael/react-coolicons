@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-11-11
+
+- Release of version 2.0.0 based on version 4.1 of coolicons library. 
+
 ## [1.1.1] - 2023-11-09
 
 - Release proper directories to the NPM registry
