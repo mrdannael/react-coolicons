@@ -17,5 +17,9 @@
   "repository": "git@github.com:mrdannael/react-coolicons.git",
   "author": "mrdannael <mr.dannael@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "directory-tree": "^3.5.1",
+    "lodash": "^4.17.21"
+  }
 }
