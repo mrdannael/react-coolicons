@@ -11,9 +11,9 @@
 
 **Coolicons** a carefully designed icons for your next project. 
 
-This package is based on [coolicons](https://github.com/krystonschwarze/coolicons) repository by Kryston Schwarze. You can [buy him a coffee](https://www.buymeacoffee.com/krystonschwarze).
+This package is based on version **4.1** of [coolicons](https://github.com/krystonschwarze/coolicons) repository by Kryston Schwarze.
 
-
+You can easily search through available icons at [react-coolicons](https://mrdannael.github.io/react-coolicons/) page.
 
 ## Installation & Usage
 
@@ -42,6 +42,10 @@ function MyComponent() {
 ```
 
 Icons accepts common SVG properties.
+
+## Support this project
+
+[![coolicons](.github/coffee.png)](https://www.buymeacoffee.com/mrdannael)
 
 ## License
 
