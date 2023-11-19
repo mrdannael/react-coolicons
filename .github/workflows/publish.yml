@@ -18,6 +18,7 @@ jobs:
           cache: yarn
           node-version: 18.16.0
           registry-url: https://registry.npmjs.org
+      - run: yarn global add @svgr/core
       - run: yarn install
       - run: yarn build
       - run: yarn publish
