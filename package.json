@@ -31,7 +31,7 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@svgr/core": "^8.1.0",
+    "@svgr/cli": "^8.1.0",
     "@types/react": "^18.2.37",
     "directory-tree": "^3.5.1",
     "lodash": "^4.17.21",
