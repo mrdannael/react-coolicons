@@ -1,2 +1,13 @@
-!svg
-src
+# ignore directories
+.github
+docs
+icons
+scripts
+svg
+
+#ignore files
+.gitignore
+rollup.config.mjs
+svgo.config.js
+tsconfig.json
+yarn.lock

@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+    tags:
+      - "*"
+  pull_request:
+    branches: [master]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v3
+      - name: Use Node.js v18.16.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.0
+      - run: yarn install
+      - run: yarn prepareDocsIcons 
+      - name: Install, build, and upload your site
+        uses: withastro/action@v1
+        with:
+          path: ./docs # The root location of your Astro project inside the repository. (optional)
+          # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
+          package-manager: yarn@1.22.19 # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+      
+        
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

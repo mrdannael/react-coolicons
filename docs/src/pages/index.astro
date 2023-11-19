@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SearchEngine from '../components/SearchEngine.tsx';
+---
+
+<Layout title="React Coolicons Viewer">
+	<main class="w-2/3 mx-auto">
+		<SearchEngine client:load />
+	</main>
+</Layout>
+
