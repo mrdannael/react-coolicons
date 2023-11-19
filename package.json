@@ -16,6 +16,7 @@
   "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
@@ -44,11 +45,12 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "prebuild": "npm-run-all -lsc generateIcons generateEntryIndex rimraf",
+    "prebuild": "npm-run-all -lsc generateIcons generateEntryIndex rimraf generateTypes",
     "build": "rollup -c rollup.config.mjs",
     "rimraf": "rimraf ./dist",
     "generateEntryIndex": "node scripts/generateEntryIndex.js",
     "generateIcons": "rimraf ./svg && svgr --typescript --out-dir svg -- icons",
+    "generateTypes": "tsc svg/index.ts --jsx react --declaration --emitDeclarationOnly --outDir ./dist/types",
     "prepareDocsIcons": "node scripts/generatePathJSON.js"
   },
   "peerDependencies": {

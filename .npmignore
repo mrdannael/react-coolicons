@@ -1,4 +1,5 @@
 # ignore directories
+.github
 docs
 icons
 scripts
@@ -8,4 +9,5 @@ svg
 .gitignore
 rollup.config.mjs
 svgo.config.js
+tsconfig.json
 yarn.lock
