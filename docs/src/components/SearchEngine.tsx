@@ -43,7 +43,7 @@ const IconBox = ({ category, name, componentName }: Omit<Icon, 'path'>) => {
       onClick={copyToClipboard}
       className="transition flex flex-col w-20 h-20 rounded-lg border-stone-700 hover:border-red-600 m-4 p-4 hover:cursor-pointer hover:text-coolred shadow-lg hover:ease-in hover:shadow-xl"
     >
-      <SVG src={`react-coolicons/icons/${category}/${name}`} name={componentName} height={48} width={48}/>
+      <SVG src={`/react-coolicons/icons/${category}/${name}`} name={componentName} height={48} width={48}/>
     </div>
   )
 }
