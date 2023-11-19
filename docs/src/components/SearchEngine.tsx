@@ -76,7 +76,6 @@ export default function SearchEngine() {
 
     const results = fuse.search(value);
     const items = results.map((result) => result.item);
-    console.log("items", items)
     setSearchResults(items);
   };
 
