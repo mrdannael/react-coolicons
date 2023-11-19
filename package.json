@@ -11,15 +11,47 @@
     "url": "https://github.com/mrdannael/react-coolicons/issues"
   },
   "files": [
-    "svg/"
+    "dist"
   ],
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "repository": "git@github.com:mrdannael/react-coolicons.git",
   "author": "mrdannael <mr.dannael@gmail.com>",
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@svgr/core": "^8.1.0",
+    "@types/react": "^18.2.37",
     "directory-tree": "^3.5.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "npm-run-all": "^4.1.5",
+    "react": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.5.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "prebuild": "npm-run-all -lsc generateIcons generateEntryIndex rimraf",
+    "build": "rollup -c rollup.config.mjs",
+    "rimraf": "rimraf ./dist",
+    "generateEntryIndex": "node scripts/generateEntryIndex.js",
+    "generateIcons": "rimraf ./svg && svgr --typescript --out-dir svg -- icons",
+    "prepareDocsIcons": "node scripts/generatePathJSON.js"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   }
 }

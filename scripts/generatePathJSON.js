@@ -1,6 +1,8 @@
-const fs = require("fs");
-const dirTree = require("directory-tree");
-const _ = require("lodash");
+import fs from "fs";
+import dirTree from "directory-tree";
+import _ from "lodash"
+
+fs.cpSync("./icons", "./docs/public/icons/", { recursive: true });
 
 function callback(item, path) {
   item.componentName = _.startCase(_.camelCase(item.name.split('.')[0])).replace(/ /g, '');

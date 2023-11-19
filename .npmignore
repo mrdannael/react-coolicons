@@ -1,1 +1,11 @@
+# ignore directories
 docs
+icons
+scripts
+svg
+
+#ignore files
+.gitignore
+rollup.config.mjs
+svgo.config.js
+yarn.lock

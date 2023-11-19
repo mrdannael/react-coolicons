@@ -19,3 +19,9 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# copy of icons
+public/icons
+
+# generated paths of icons for the docs
+src/icons.json
