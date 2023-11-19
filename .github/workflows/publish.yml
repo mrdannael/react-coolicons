@@ -12,27 +12,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - name: Use Node.js v18.16.0
         uses: actions/setup-node@v3
         with:
-          cache: yarn
+          cache: npm
           node-version: 18.16.0
           registry-url: https://registry.npmjs.org
-
-      - name: Run install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
-
-      - name: Build
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build
-
-      - name: Build
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: publish
+      - run: npm install
+      - run: npm run build
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
