@@ -1,9 +1,10 @@
 ---
-
+import { Image } from 'astro:assets';
+import BannerImg from "../assets/header.png";
 ---
 
 <header class="flex flex-col items-center my-4 mx-auto w-2/3">
-	<img src="/react-coolicons/header.png" alt="Coolicons banner">
+	<Image src={BannerImg} alt="Coolicons banner" loading="eager" />
 	<div class="my-8 text-xl">
 		<b>Coolicons</b> a carefully designed icons for your next project.
 		This package is based on <b>version 4.1</b> of <a class="text-coolred hover:text-coolrose" href="https://github.com/krystonschwarze/coolicons">coolicons</a> repository by Kryston Schwarze.

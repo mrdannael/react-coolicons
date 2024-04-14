@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import CoffeeImg from "../assets/coffee.svg";
+
 const currentYear = new Date().getFullYear()
 ---
 
@@ -9,7 +12,7 @@ const currentYear = new Date().getFullYear()
     </div>
     <div>
       <a target="_blank" href="https://www.buymeacoffee.com/mrdannael">
-        <img class="h-12" src="/react-coolicons/coffee.svg" alt="buy me a coffee" />
+        <Image class="h-12 w-auto" src={CoffeeImg} alt="Buy me a coffee" />
       </a>
     </div>
   </div>
