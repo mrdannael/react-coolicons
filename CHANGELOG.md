@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2024-04-14
+
 - Fix `Could not find a declaration file for module 'react-coolicons'` by adding `types` entry to the `package.json` file
 - Bump project devDependencies
 
