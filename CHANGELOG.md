@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Fix `Could not find a declaration file for module 'react-coolicons'` by adding `types` entry to the `package.json` file
+- Bump project devDependencies
+
 ## [2.0.0] - 2023-11-19
 
 - Release of version 2.0.0 based on version 4.1 of coolicons library
