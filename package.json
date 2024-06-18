@@ -29,18 +29,18 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@svgr/cli": "^8.1.0",
-    "@types/react": "^18.2.78",
+    "@types/react": "^18.3.3",
     "directory-tree": "^3.5.1",
     "lodash": "^4.17.21",
     "npm-run-all": "^4.1.5",
-    "react": "^18.2.0",
-    "rimraf": "^5.0.5",
-    "rollup": "^4.14.2",
-    "rollup-plugin-dts": "^6.1.0",
+    "react": "^18.3.1",
+    "rimraf": "^5.0.7",
+    "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^5.4.5"
@@ -50,11 +50,11 @@
     "build": "rollup -c rollup.config.mjs",
     "rimraf": "rimraf ./dist",
     "generateEntryIndex": "node scripts/generateEntryIndex.js",
-    "generateIcons": "rimraf ./svg && svgr --typescript --out-dir svg -- icons",
+    "generateIcons": "rimraf ./svg && svgr icons",
     "generateTypes": "tsc svg/index.ts --jsx react --declaration --emitDeclarationOnly --outDir ./dist/types",
     "prepareDocsIcons": "node scripts/generatePathJSON.js"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": ">= 18"
   }
 }

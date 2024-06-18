@@ -1,7 +1,6 @@
-export default {
+module.exports = {
   multipass: true,
   plugins: [
-    'removeDimensions',
     'sortAttrs',
     {
       name: 'addAttributesToSVGElement',
