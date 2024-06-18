@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2024-06-18
+
+### Beaking Changes
+
+- Updated the method of generating icons as React components using SVGR:
+  - Fixed SVGO config by changing the file extension.
+  - Moved SVGR CLI arguments from the `package.json` build script to a separate configuration file.
+  - Enabled the `icon: true` flag within the SVGR configuration.
+- Icons now have a default size (`width` and `height`) of `1em`, and the `viewBox` property is included. This change allows the icon size to be modified using classes such as `w-x`, `h-x`, or `size-x` in Tailwind CSS.
+
+### Other Changes
+- Bump devDependencies for react-coolicons package
 - Bump docs dependencies versions and adjust the code
 
 ## [2.0.1] - 2024-04-14
