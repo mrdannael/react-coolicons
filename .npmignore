@@ -8,6 +8,7 @@ svg
 #ignore files
 .gitignore
 rollup.config.mjs
-svgo.config.js
+svgo.config.cjs
+svgr.config.cjs
 tsconfig.json
 yarn.lock

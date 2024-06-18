@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- update .npmignore file
+
 ## [3.0.0] - 2024-06-18
 
 ### Beaking Changes
