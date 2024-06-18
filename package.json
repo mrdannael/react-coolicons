@@ -50,7 +50,7 @@
     "build": "rollup -c rollup.config.mjs",
     "rimraf": "rimraf ./dist",
     "generateEntryIndex": "node scripts/generateEntryIndex.js",
-    "generateIcons": "rimraf ./svg && svgr --typescript --out-dir svg -- icons",
+    "generateIcons": "rimraf ./svg && svgr icons",
     "generateTypes": "tsc svg/index.ts --jsx react --declaration --emitDeclarationOnly --outDir ./dist/types",
     "prepareDocsIcons": "node scripts/generatePathJSON.js"
   },
