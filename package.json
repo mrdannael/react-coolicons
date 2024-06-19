@@ -13,6 +13,11 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:mrdannael/react-coolicons.git"
+  },
+  "homepage": "https://mrdannael.github.io/react-coolicons/",
   "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -24,7 +29,6 @@
       "types": "./dist/types/index.d.ts"
     }
   },
-  "repository": "git@github.com:mrdannael/react-coolicons.git",
   "author": "mrdannael <mr.dannael@gmail.com>",
   "license": "MIT",
   "private": false,
