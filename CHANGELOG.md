@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- update .npmignore file
+## [3.1.0] - 2024-06-19
+
+- Set default `width` and `height` for svg to be __24px__
+  - People switching from version `2.0.1` should not see any change
+  - People switching from version `3.0.0`, standard icons might be bigger without modifying size via class or props
+- Update `.npmignore` file
 
 ## [3.0.0] - 2024-06-18
 
